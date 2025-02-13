@@ -28,7 +28,7 @@ macro_rules! arr {
 
     ($([$($elems:expr),+]),+ $(,)?) => {{
         fn flatten<T: Clone>(nested: &[Vec<T>]) -> Vec<T> {
-            nested.iter().flat_map(|inner| inner.clone()).collect()
+            nested.iter().flat_map(|inner| inner.clone())).collect()
         }
 
         fn get_shape<T>(nested: &[Vec<T>]) -> Vec<usize> {
